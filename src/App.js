@@ -13,6 +13,7 @@ function App() {
 	return (
 		<ApolloProvider client={client}>
 			<main>
+				POKEDEX
 				<PokemonsContainer />
 			</main>
 		</ApolloProvider>
