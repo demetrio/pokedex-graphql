@@ -6,7 +6,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
 	display: flex;
-	max-width: 550px;
+	max-width: 1100px;
 	margin: auto;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -18,7 +18,7 @@ const Container = styled.div`
 
 function PokemonsContainer() {
 	const { data: { pokemons = [] } = {} } = useQuery(GET_POKEMONS, {
-		variables: { first: 9 },
+		variables: { first: 21 },
 	});
 
 	return <Container>{pokemons && pokemons.map((pokemon) => <Pokemon key={pokemon.id} pokemon={pokemon} />)}</Container>;

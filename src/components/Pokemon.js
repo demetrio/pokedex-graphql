@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import Color from '../data/colors';
+import color from '../data/colors';
+import dimensions from '../data/dimensions';
 
 const PokemonCard = styled.div`
-	width: 49%;
+	width: 32%;
 	background-color: #fff;
 	background-clip: border-box;
 	border: 1px solid rgba(0, 0, 0, 0.125);
@@ -12,18 +13,18 @@ const PokemonCard = styled.div`
 	overflow: hidden;
 	margin-bottom: 20px;
 
-	@media (max-width: 800px) {
+	@media (max-width: ${dimensions.maxwidthTablet}px) {
+		width: 100%;
+	}
+
+	@media (max-width: ${dimensions.maxwidthMobile}px) {
+		flex-wrap: wrap;
 		width: 100%;
 	}
 `;
 
-function getColor(type) {
-	console.log(type);
-	return Color[type];
-}
-
 const PokemonName = styled.div`
-	background-color: ${(props) => getColor(props.type)};
+	background-color: ${(props) => color[props.type]};
 	text-align: center;
 	padding: 10px;
 
@@ -53,7 +54,9 @@ const PokemonAttacks = styled.div`
 	display: flex;
 	padding-left: 10px;
 	padding-right: 10px;
-	justify-content: space-between;
+  justify-content: space-between;
+  position: sticky;
+  bottom: 0;
 
 	span {
 		width: 30%;
@@ -64,12 +67,18 @@ const PokemonAttacks = styled.div`
 		color: #fff;
 		padding-left: 10px;
 		padding-right: 10px;
-		font-size: 12px;
+		font-size: 10px;
 		margin-bottom: 10px;
 		word-wrap: break-word;
 		text-align: center;
 		line-height: 15px;
-	}
+  }
+  
+  @media (max-width: ${dimensions.maxwidthMobile} px) {
+    
+    span{
+      width: 100%;
+    }
 `;
 
 const PokemonMeta = styled.div`
@@ -86,6 +95,15 @@ const PokemonMeta = styled.div`
 		margin: 0;
 		padding: 5px 20px;
 		border-radius: 5px;
+	}
+
+	@media (max-width: ${dimensions.maxwidthMobile} px) {
+		flex-wrap: wrap;
+
+		span {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 	}
 `;
 

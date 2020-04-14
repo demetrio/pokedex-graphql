@@ -1,4 +1,4 @@
-const Color = {
+const color = {
 	Bug: '#91ba2e',
 	Dragon: '#29036a',
 	Electric: '#969101',
@@ -19,4 +19,4 @@ const Color = {
 	Steel: '#454545',
 };
 
-export default Color;
+export default color;
