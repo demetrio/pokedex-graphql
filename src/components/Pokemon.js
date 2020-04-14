@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Color from '../data/colors';
 
 const PokemonCard = styled.div`
 	width: 49%;
@@ -16,8 +17,13 @@ const PokemonCard = styled.div`
 	}
 `;
 
+function getColor(type) {
+	console.log(type);
+	return Color[type];
+}
+
 const PokemonName = styled.div`
-	background-color: #ecd018;
+	background-color: ${(props) => getColor(props.type)};
 	text-align: center;
 	padding: 10px;
 
@@ -86,7 +92,7 @@ const PokemonMeta = styled.div`
 export function Pokemon({ pokemon }) {
 	return (
 		<PokemonCard>
-			<PokemonName>
+			<PokemonName type={pokemon.types[0]}>
 				<p>{pokemon.name}</p>
 			</PokemonName>
 			<PokemonMeta>
