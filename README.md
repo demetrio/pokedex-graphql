@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://pokedexql.netlify.com">
-    <img alt="GraphQL-Pokemon" src="https://www.seekpng.com/png/detail/228-2285781_pokemon-pokedex.png" width="60" />
+    <img alt="GraphQL-Pokemon" src="https://www.seekpng.com/png/detail/228-2285781_pokemon-pokedex.png" />
   </a>
 </p>
 <h1 align="center">
@@ -16,4 +16,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Learn More
 
 To learn React, check out the [React documentation](https://reactjs.org/).
-To learan about [GraphQL-Pokemon](https://github.com/lucasbento/graphql-pokemon)
+To learn about [GraphQL-Pokemon](https://github.com/lucasbento/graphql-pokemon)
