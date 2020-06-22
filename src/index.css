@@ -16,7 +16,11 @@ body {
 	line-height: 1;
 	font-family: 'Press Start 2P', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #202020;
-	background-color: #fbfbfb;
+
+	background: #efefbb;
+	background: -webkit-linear-gradient(to right, #d4d3dd, #efefbb);
+	background: linear-gradient(to right, #d4d3dd, #efefbb);
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
